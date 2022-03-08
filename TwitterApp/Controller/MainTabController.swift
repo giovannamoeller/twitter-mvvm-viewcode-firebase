@@ -11,22 +11,21 @@ class MainTabController: UITabBarController {
   
   // MARK: Properties
   
+  private var tabBarHeight: CGFloat = 90
+  
   // MARK: Lifecycle
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    tabBar.tintColor = .systemCyan
-    tabBar.unselectedItemTintColor = .systemCyan
+    tabBar.tintColor = .black.withAlphaComponent(0.8)
+    tabBar.unselectedItemTintColor = .black.withAlphaComponent(0.8)
     tabBar.backgroundColor = .systemBackground.withAlphaComponent(0.8)
     setupVCs()
   }
   
   override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
-    
-    tabBar.frame.size.height = 92
-    print(view.frame.height)
-    tabBar.frame.origin.y = view.frame.height - 92
+    changeTabBarHeight(height: tabBarHeight)
   }
   
   // MARK: Helpers
@@ -40,7 +39,7 @@ class MainTabController: UITabBarController {
     
     viewControllers = [
       createNavController(for: feed, title: "Feed", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill")),
-      createNavController(for: explore, title: "Explore", image: UIImage(systemName: "magnifyingglass.circle"), selectedImage: UIImage(systemName: "magnifyingglass.circle.fill")),
+      createNavController(for: explore, title: "Explore", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass")),
       createNavController(for: notifications, title: "Notifications", image: UIImage(systemName: "bell"), selectedImage: UIImage(systemName: "bell.fill")),
       createNavController(for: conversations, title: "Conversations", image: UIImage(systemName: "paperplane"), selectedImage: UIImage(systemName: "paperplane.fill"))]
   }
@@ -53,6 +52,12 @@ class MainTabController: UITabBarController {
     nav.tabBarItem.selectedImage = selectedImage
     vc.navigationItem.title = title
     return nav
+  }
+  
+  func changeTabBarHeight(height: CGFloat) {
+    tabBar.frame.size.height = height
+    print(view.frame.height)
+    tabBar.frame.origin.y = view.frame.height - height
   }
 
 
