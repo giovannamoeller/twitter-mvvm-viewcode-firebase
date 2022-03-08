@@ -46,6 +46,7 @@ class MainTabController: UITabBarController {
   }
   
   func createNavController(for vc: UIViewController, title: String, image: UIImage?, selectedImage: UIImage?) -> UIViewController {
+    // We need to embed all VCs in a Navigation Controller because inside of each VC we have navigation (such as click in a tweet and go to profile page)
     let nav = UINavigationController(rootViewController: vc)
     //nav.tabBarItem.title = title
     nav.tabBarItem.image = image
