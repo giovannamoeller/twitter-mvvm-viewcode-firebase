@@ -36,12 +36,11 @@ class MainTabController: UITabBarController {
     let explore = ExploreViewController()
     let notifications = NotificationsViewController()
     let conversations = ConversationsViewController()
-    
     viewControllers = [
       createNavController(for: feed, title: "Feed", image: UIImage(systemName: "house"), selectedImage: UIImage(systemName: "house.fill")),
-      createNavController(for: explore, title: "Explore", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass")),
+      createNavController(for: explore, title: "Explore", image: UIImage(systemName: "magnifyingglass"), selectedImage: UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(weight: .bold))),
       createNavController(for: notifications, title: "Notifications", image: UIImage(systemName: "bell"), selectedImage: UIImage(systemName: "bell.fill")),
-      createNavController(for: conversations, title: "Conversations", image: UIImage(systemName: "paperplane"), selectedImage: UIImage(systemName: "paperplane.fill"))]
+      createNavController(for: conversations, title: "Conversations", image: UIImage(systemName: "envelope"), selectedImage: UIImage(systemName: "envelope.fill"))]
   }
   
   func createNavController(for vc: UIViewController, title: String, image: UIImage?, selectedImage: UIImage?) -> UIViewController {
@@ -56,7 +55,6 @@ class MainTabController: UITabBarController {
   
   func changeTabBarHeight(height: CGFloat) {
     tabBar.frame.size.height = height
-    print(view.frame.height)
     tabBar.frame.origin.y = view.frame.height - height
   }
 
