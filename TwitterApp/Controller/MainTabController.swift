@@ -15,16 +15,25 @@ class MainTabController: UITabBarController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemBlue
-    tabBar.tintColor = .gray
-    tabBar.backgroundColor = .systemBackground
+    tabBar.tintColor = .systemCyan
+    tabBar.unselectedItemTintColor = .systemCyan
+    tabBar.backgroundColor = .systemBackground.withAlphaComponent(0.8)
     setupVCs()
+  }
+  
+  override func viewDidLayoutSubviews() {
+    super.viewDidLayoutSubviews()
+    
+    tabBar.frame.size.height = 92
+    print(view.frame.height)
+    tabBar.frame.origin.y = view.frame.height - 92
   }
   
   // MARK: Helpers
   
   func setupVCs() {
     let feed = FeedViewController()
+    //feed.tabBarItem.image = ...
     let explore = ExploreViewController()
     let notifications = NotificationsViewController()
     let conversations = ConversationsViewController()
@@ -38,7 +47,7 @@ class MainTabController: UITabBarController {
   
   func createNavController(for vc: UIViewController, title: String, image: UIImage?, selectedImage: UIImage?) -> UIViewController {
     let nav = UINavigationController(rootViewController: vc)
-    nav.tabBarItem.title = title
+    //nav.tabBarItem.title = title
     nav.tabBarItem.image = image
     nav.tabBarItem.selectedImage = selectedImage
     vc.navigationItem.title = title
