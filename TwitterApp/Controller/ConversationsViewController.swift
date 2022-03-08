@@ -15,7 +15,7 @@ class ConversationsViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    
+    view.backgroundColor = .systemIndigo
     // Do any additional setup after loading the view.
   }
   
