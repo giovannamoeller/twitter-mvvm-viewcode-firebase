@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48178A3627DD0A4600FD06AF /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48178A3527DD0A4600FD06AF /* FeedView.swift */; };
 		48E5443727D6E6880086FD09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5443627D6E6880086FD09 /* AppDelegate.swift */; };
 		48E5443927D6E6880086FD09 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5443827D6E6880086FD09 /* SceneDelegate.swift */; };
 		48E5443B27D6E6880086FD09 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48E5443A27D6E6880086FD09 /* MainTabController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		48178A3527DD0A4600FD06AF /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
 		48E5443327D6E6880086FD09 /* TwitterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TwitterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48E5443627D6E6880086FD09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48E5443827D6E6880086FD09 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 		48E5444B27D6E91F0086FD09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				48178A3527DD0A4600FD06AF /* FeedView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -194,6 +197,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48178A3627DD0A4600FD06AF /* FeedView.swift in Sources */,
 				48E5443B27D6E6880086FD09 /* MainTabController.swift in Sources */,
 				48E5443727D6E6880086FD09 /* AppDelegate.swift in Sources */,
 				48E5445727D77EE90086FD09 /* ConversationsViewController.swift in Sources */,
@@ -346,6 +350,7 @@
 				INFOPLIST_FILE = TwitterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -373,6 +378,7 @@
 				INFOPLIST_FILE = TwitterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

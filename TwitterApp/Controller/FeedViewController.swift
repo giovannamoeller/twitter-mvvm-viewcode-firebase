@@ -15,10 +15,14 @@ class FeedViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
-    view.backgroundColor = .systemPink
-    // Do any additional setup after loading the view.
+    view = FeedView(frame: .zero)
+    configureUI()
   }
   
   // MARK: Helpers
+  
+  func configureUI() {
+    navigationItem.titleView = UIImageView(image: UIImage(named: "twitter"))
+  }
   
 }
